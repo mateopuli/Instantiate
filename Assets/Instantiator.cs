@@ -5,8 +5,17 @@ using UnityEngine;
 public class Instantiator : MonoBehaviour
 {
     public GameObject objectToClone;
-    public void CloneObject()
+    public int cantidad;
+    
+    public void CloneObject()  
     {
-        Instantiate(objectToClone);
+        int i = 1;
+        while (i < cantidad)
+        {
+            Instantiate(objectToClone);
+            i++;
+        }
+            
+        
     }
 }
